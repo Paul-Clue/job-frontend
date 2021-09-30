@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import * as ReactBootstrap from 'react-bootstrap';
 import getData from './util/apiFetch';
 import './assets/stylesheets/App.css';
 
@@ -14,6 +15,8 @@ function App() {
       firstInt: '', secondInt: '', operator: '', result: '',
     },
   });
+
+  const [loading, setLoading] = useState(false);
 
   const handleOnChange = () => {
     setFirstInt(
@@ -50,6 +53,9 @@ function App() {
       .then((data) => {//eslint-disable-line
 
         if (data.error === 'Please select an operator!' || data.error === 'Please fill in all fields!') {
+          setLoading(
+            false,
+          );
           setAnswer(
             {
               Expression: {
@@ -57,21 +63,27 @@ function App() {
               },
             },
           );
-          console.log(answer);
         } else {
           setAnswer(
             data,
+          );
+          setLoading(
+            false,
           );
 
           return data;
         }
       });
+    setLoading(
+      true,
+    );
   };
 
   return (
     <>
-      <h1>Hey</h1>
       <div className="App">
+        {loading ? <ReactBootstrap.Spinner animation="border" variant="info" className="spinner" /> : null}{/*eslint-disable-line*/}
+        {/* <ReactBootstrap.Spinner animation="border" variant="info" className="spinner" /> */}
         <h1>Basic Math</h1>
         <form onSubmit={handleSubmit} id="loginId">
           <label htmlFor="nameInput">
