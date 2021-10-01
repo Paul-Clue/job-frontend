@@ -65,7 +65,6 @@ function App() {
             },
           );
         } else {
-          console.log(data);
           setAnswer(
             data,
           );
