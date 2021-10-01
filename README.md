@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Simple Calculator Front End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This is the front end for a simple arithmetic calculator app the uses a rails api for the back end.
 
-## Available Scripts
+### Requests
 
-In the project directory, you can run:
+This UI sends Get requests to a rails back end .
 
-### `yarn start`
+### Params
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The params that are sent by way of the url to the rails back end:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- firstInt: string
+- operation: string
+- secondInt: string
 
-### `yarn test`
+The params that are received as json are:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- firstInt: string
+- operation: string
+- secondInt: string
+- result: string
 
-### `yarn build`
+## Built With
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Live Demo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Simple Arithmetic](https://focused-dijkstra-3c89cc.netlify.app/)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Getting Started
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- React
+- Node
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Setup
 
-## Learn More
+- At the top of this repo click the button labeled "Clone".
+- Copy the HTTP URL or SSH.
+- In your terminal, type `git clone <copied-value>` replace '<copied-value>' with the HTTP, URL, or SSH that you copied from the last step.
+- In the terminal, `cd` to the folder you cloned.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Type `npm start` into your terminal.
 
-### Code Splitting
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👤 **Paul Clue**
 
-### Analyzing the Bundle Size
+- GitHub: [@PaulClue](https://github.com/Paul-Clue)
+- LinkedIn: [Paul Clue](https://www.linkedin.com/in/paul-clue/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🤝 Contributing
 
-### Making a Progressive Web App
+Contributions, issues and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Give a ⭐️ if you like this project!
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📝 License
 
-### `yarn build` fails to minify
+This project is [MIT](./LICENSE) licensed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* ...
