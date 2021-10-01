@@ -46,7 +46,8 @@ function App() {
       secondInt: secondNum,
     });
 
-    const getAnswer = `http://localhost:3001/expression?${params.toString()}`;
+    // const getAnswer = `http://localhost:3001/expression?${params.toString()}`;
+    const getAnswer = `https://morning-river-68243.herokuapp.com/expression?${params.toString()}`;
 
     getData(getAnswer)
       .then((response) => response.json())
@@ -64,6 +65,7 @@ function App() {
             },
           );
         } else {
+          console.log(data);
           setAnswer(
             data,
           );
@@ -93,27 +95,28 @@ function App() {
 
           <br />
           <br />
-          <label htmlFor="html">
-            +
+          <label htmlFor="Add" className="container">
             <input type="radio" id="Add" name="math" value="+" onChange={handleOnChange} />
+            <span className="checkmark">+</span>
             &nbsp;&nbsp;
           </label>
           {/* <br /> */}
-          <label htmlFor="css">
-            -
+          <label htmlFor="Subtract" className="container">
             <input type="radio" id="Subtract" name="math" value="-" onChange={handleOnChange} />
+            <span className="checkmark">-</span>
             &nbsp;&nbsp;
           </label>
           {/* <br /> */}
-          <label htmlFor="Multiply">
-            x
+          <label htmlFor="Multiply" className="container">
             <input type="radio" id="Multiply" name="math" value="*" onChange={handleOnChange} />
+            <span className="checkmark">x</span>
             &nbsp;&nbsp;
           </label>
           {/* <br /> */}
-          <label htmlFor="Divide">
-            /
+          <label htmlFor="Divide" className="container">
             <input type="radio" id="Divide" name="math" value="/" onChange={handleOnChange} />
+            &nbsp;&nbsp;
+            <span className="checkmark">/</span>
           </label>
           <br />
           <br />
